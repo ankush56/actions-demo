@@ -18,14 +18,22 @@ jobs:
   # This workflow contains a single job called "build"
   build:
     # The type of runner that the job will run on
+    # YOu can your own self hosted or github workflow runner
+    # Self hosted use selfhost tag. So here we have standard
     runs-on: ubuntu-latest
 
     # Steps represent a sequence of tasks that will be executed as part of the job
+    #Commands or Actions
     steps:
       # Checks-out your repository under $GITHUB_WORKSPACE, so your job can access it
+      #Checkout is  "standard actions"
+      #All actions runs as step
+      #Not all steps run as actions
       - uses: actions/checkout@v2
 
       # Runs a single command using the runners shell
+      # - Name -- name of command/action
+      # - run -  command
       - name: Run a one-line script
         run: echo Hello, world!
 
